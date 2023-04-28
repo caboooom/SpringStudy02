@@ -2,6 +2,7 @@ package hello_2303.core;
 
 import hello_2303.core.discount.DiscountPolicy;
 import hello_2303.core.discount.FixDiscountPolicy;
+import hello_2303.core.discount.RateDiscountPolicy;
 import hello_2303.core.member.MemberRepository;
 import hello_2303.core.member.MemberService;
 import hello_2303.core.member.MemberServiceImpl;
@@ -24,6 +25,8 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
